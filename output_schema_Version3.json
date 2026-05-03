@@ -1,0 +1,21 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Walmart vs. Target Price War Map Scraper",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Overview",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "priceComparison": {
+            "type": "string",
+            "title": "Price Comparison",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=priceComparison"
+        },
+        "geographicWinner": {
+            "type": "string",
+            "title": "Geographic Winner Map",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=geographicWinner"
+        }
+    }
+}

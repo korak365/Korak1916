@@ -1,0 +1,45 @@
+{
+    "title": "Input schema of the Walmart vs. Target Price War Map Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Walmart and Target product URLs to compare.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.walmart.com/search?q=electronics"
+                },
+                {
+                    "url": "https://www.target.com/s?searchTerm=electronics"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of products to compare.",
+            "default": 100
+        },
+        "searchTerms": {
+            "title": "Search Terms",
+            "type": "array",
+            "description": "Product categories to search and compare.",
+            "prefill": ["electronics", "clothing", "home-goods"]
+        },
+        "locations": {
+            "title": "Geographic Locations",
+            "type": "array",
+            "description": "Zip codes or cities to check for geographic pricing differences.",
+            "prefill": ["10001", "90210", "60601"]
+        },
+        "priceThreshold": {
+            "title": "Price Difference Threshold (%)",
+            "type": "integer",
+            "description": "Only report price differences above this percentage.",
+            "default": 5
+        }
+    }
+}

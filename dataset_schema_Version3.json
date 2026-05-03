@@ -1,0 +1,119 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["productName", "category", "location", "walmartPrice", "targetPrice", "priceDifference", "winner"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "location": {
+                        "label": "Location",
+                        "format": "text"
+                    },
+                    "walmartPrice": {
+                        "label": "Walmart Price",
+                        "format": "text"
+                    },
+                    "targetPrice": {
+                        "label": "Target Price",
+                        "format": "text"
+                    },
+                    "priceDifference": {
+                        "label": "Price Difference (%)",
+                        "format": "number"
+                    },
+                    "winner": {
+                        "label": "Winner",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "priceComparison": {
+            "title": "Price Comparison Details",
+            "transformation": {
+                "fields": ["productName", "walmartUrl", "targetUrl", "walmartPrice", "targetPrice", "priceDifference", "savingsAmount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "walmartUrl": {
+                        "label": "Walmart URL",
+                        "format": "link"
+                    },
+                    "targetUrl": {
+                        "label": "Target URL",
+                        "format": "link"
+                    },
+                    "walmartPrice": {
+                        "label": "Walmart Price",
+                        "format": "text"
+                    },
+                    "targetPrice": {
+                        "label": "Target Price",
+                        "format": "text"
+                    },
+                    "priceDifference": {
+                        "label": "Price Difference (%)",
+                        "format": "number"
+                    },
+                    "savingsAmount": {
+                        "label": "Potential Savings",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "geographicWinner": {
+            "title": "Geographic Winner Map",
+            "transformation": {
+                "fields": ["location", "zipCode", "walmartAvgPrice", "targetAvgPrice", "geographicWinner", "productsCount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "location": {
+                        "label": "Location",
+                        "format": "text"
+                    },
+                    "zipCode": {
+                        "label": "Zip Code",
+                        "format": "text"
+                    },
+                    "walmartAvgPrice": {
+                        "label": "Walmart Avg Price",
+                        "format": "text"
+                    },
+                    "targetAvgPrice": {
+                        "label": "Target Avg Price",
+                        "format": "text"
+                    },
+                    "geographicWinner": {
+                        "label": "Geographic Winner",
+                        "format": "text"
+                    },
+                    "productsCount": {
+                        "label": "Products Count",
+                        "format": "number"
+                    }
+                }
+            }
+        }
+    }
+}
